@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
+FROM appzic/dc:base-ubuntu-22.04
 
 ARG VERSION=3.12.2
 
