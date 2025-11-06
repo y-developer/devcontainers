@@ -1,0 +1,12 @@
+name: Workflow X
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  x-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo "This is Workflow X running on push to main branch"
