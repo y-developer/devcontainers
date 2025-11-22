@@ -1,21 +1,15 @@
-FROM appzic/dc:base-ubuntu-22.04
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
 
-ARG VERSION=8.1
-ARG NODE_VERSION=18.x
+ARG PHP_VERSION
 
 USER vscode
-
-RUN sudo apt-get update -y
-
-# Install Node Js
-RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION} | sudo -E bash - &&\
-    sudo apt-get install -y nodejs
 
 # Install php
 RUN sudo add-apt-repository ppa:ondrej/php \
     && sudo apt-get update -y \
-    && sudo apt-get install -y php${VERSION} \
-    && sudo a2enmod php${VERSION}
+    && sudo apt-get install -y php${PHP_VERSION} \
+    && sudo a2enmod php${PHP_VERSION}
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php \
@@ -23,13 +17,13 @@ RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php \
 
 # Install php modules
 RUN sudo apt-get install -y \
-    php${VERSION}-cli \
-    php${VERSION}-common \
-    php${VERSION}-mysql \
-    php${VERSION}-zip \
-    php${VERSION}-gd \
-    php${VERSION}-mbstring \
-    php${VERSION}-curl \
-    php${VERSION}-xml \
-    php${VERSION}-bcmath \
-    php${VERSION}-sqlite3
+    php${PHP_VERSION}-cli \
+    php${PHP_VERSION}-common \
+    php${PHP_VERSION}-mysql \
+    php${PHP_VERSION}-zip \
+    php${PHP_VERSION}-gd \
+    php${PHP_VERSION}-mbstring \
+    php${PHP_VERSION}-curl \
+    php${PHP_VERSION}-xml \
+    php${PHP_VERSION}-bcmath \
+    php${PHP_VERSION}-sqlite3

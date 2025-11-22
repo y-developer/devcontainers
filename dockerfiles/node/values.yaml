@@ -1,0 +1,19 @@
+image:
+  name: ghcr.io/appzic/devcontainer-node
+  tags:
+    - tag: 18.x
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-ubuntu:24.04
+        - node_version: 18.x
+    - tag: 20.x
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-ubuntu:24.04
+        - node_version: 20.x
+    - tag: 22.x
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-ubuntu:24.04
+        - node_version: 22.x
+    - tag: 24.x
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-ubuntu:24.04
+        - node_version: 24.x
