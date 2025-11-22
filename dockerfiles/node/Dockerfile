@@ -1,11 +1,11 @@
-FROM appzic/dc:base-ubuntu-22.04
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
 
-ARG VERSION=20.x
+ARG NODE_VERSION
 
 USER vscode
 
 RUN sudo apt-get update -y
 
-# Install Node 20.x
-RUN curl -fsSL https://deb.nodesource.com/setup_${VERSION} | sudo -E bash - &&\
+RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION} | sudo -E bash - &&\
     sudo apt-get install -y nodejs
