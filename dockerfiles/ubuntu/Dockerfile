@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/devcontainers/base:ubuntu-${UBUNTU_VERSION}
 
 USER vscode
 
-RUN sudo apt-get update && sudo apt-get install -y \
+RUN apt-get update && sudo apt-get install -y \
     build-essential \
     wget \
     curl \
