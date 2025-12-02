@@ -1,7 +1,7 @@
 ARG UBUNTU_VERSION
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-${UBUNTU_VERSION}
 
-USER vscode
+USER root
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -14,3 +14,5 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     apt-transport-https \
     telnet
+
+USER vscode
