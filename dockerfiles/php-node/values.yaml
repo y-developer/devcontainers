@@ -1,0 +1,11 @@
+image:
+  name: ghcr.io/appzic/devcontainer-php-node
+  tags:
+    - tag: php8.1-node20.x
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-node:20.x
+        - php_version: 8.1
+    - tag: php8.3-node24.x
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-node:24.x
+        - php_version: 8.3

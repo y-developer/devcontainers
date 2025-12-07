@@ -1,0 +1,9 @@
+image:
+  name: ghcr.io/appzic/devcontainer-ubuntu
+  tags:
+    - tag: 22.04
+      args:
+        - ubuntu_version: 22.04
+    - tag: 24.04
+      args:
+        - ubuntu_version: 24.04

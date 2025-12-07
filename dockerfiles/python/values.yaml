@@ -1,0 +1,15 @@
+image:
+  name: ghcr.io/appzic/devcontainer-python
+  tags:
+    - tag: 3.7.3
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-ubuntu:24.04
+        - python_version: 3.7.3
+    - tag: 3.12.2
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-ubuntu:24.04
+        - python_version: 3.12.2
+    - tag: 3.14.0
+      args:
+        - base_image: ghcr.io/appzic/devcontainer-ubuntu:24.04
+        - python_version: 3.14.0
